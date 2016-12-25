@@ -1,0 +1,168 @@
+<resources>
+    <string name="app_name">Shopmeet</string>
+
+    <string name="action_logout">Logout</string>
+    <string name="action_exit">Exit</string>
+
+    <!--Basic button-->
+    <string name="bt_cancel">Cancel</string>
+    <string name="bt_create">Create</string>
+    <!--Alert-->
+    <string name="alert_no_internet">No Internet connection, please active your connection.</string>
+    <string name="alert_not_working">You no longer working on this system, please contact your administrator.</string>
+    <string name="alert_message_received">You have received messaage.</string>
+    <string name="alert_feature_unavailable">This feature is temporary not available.</string>
+
+    <!--Login-->
+    <string name="hint_edt_login_email">Type email</string>
+    <string name="hint_edt_login_pass">Type password</string>
+    <string name="label_login_enter">Login</string>
+    <string name="alert_login_failure">Login failure, please try again.</string>
+
+    <!--Shop choosing-->
+    <string name="title_sch">Select your shop</string>
+    <string name="label_sch_select_shop">Select shop</string>
+    <string name="label_sch_enter">Enter</string>
+    <string name="label_sch_refresh">Refresh</string>
+
+    <!-- Frg_Personal -->
+    <string name="frg_personal_title">Contact</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_group">Groups</string>
+    <string name="title_members">Members</string>
+    <string name="bt_search">Search</string>
+    <string name="hint_search">Search name</string>
+    <string name="alert_no_othermember">No other staff was found.</string>
+    <string name="alert_no_member">No staff was found.</string>
+    <string name="alert_no_group">No group was found.</string>
+
+    <!--Frg_Mess-->
+    <string name="frg_mess_title">Conversation history</string>
+    <string name="title_today">Today</string>
+    <string name="nomess_today">No message on today</string>
+    <string name="title_pass">Past</string>
+    <string name="nomess_pass">No message on past</string>
+
+    <!-- Menu ActionBar -->
+    <string name="action_help">Help</string>
+    <string name="action_check_updates">Update</string>
+
+    <string name="host">http://153.121.44.84:3211</string>
+
+    <!--Dialog-->
+    <string name="dl_chat">Chat</string>
+    <string name="dl_call">Call</string>
+    <string name="dl_video">Video call</string>
+    <string name="dl_timeline">Timeline</string>
+    <string name="dl_note">Note</string>
+    <string name="dl_sendfile">Send file</string>
+    <string name="bt_yes">Yes</string>
+    <string name="bt_no">No</string>
+    <string name="alert_logout_title">Are you sure logout?</string>
+    <string name="alert_exit_title">Are you sure exit?</string>
+
+    <!--Chat-->
+    <string name="frg_chat_title">Chat with </string>
+    <string name="bt_send">Send</string>
+    <string name="hint_message">Type message</string>
+    <string name="search_message">Search message</string>
+
+    <!--Group-->
+    <string name="frg_group_title">Group member</string>
+    <string name="title_other_members">Members</string>
+
+    <!--Create Group-->
+    <string name="frg_crg_title">Create group</string>
+    <string name="label_group_name">Type Group name</string>
+    <string name="label_select_staff">Select staff</string>
+    <string name="label_select_store">Select store</string>
+    <string name="alert_fill_name">Please type group name</string>
+    <string name="alert_fill_staff">Please select staff</string>
+    <string name="alert_fill_store">Please select store</string>
+    <string name="alert_finish_ok">Create group successfully</string>
+    <string name="alert_finish_failed">Create group failed, please try again</string>
+
+    <!--List Task-->
+    <string name="frg_task_title">List task</string>
+    <string name="task_time_all">All</string>
+    <string name="task_time_today">Today</string>
+    <string name="task_time_week">This Week</string>
+    <string name="label_created_by">Created by: </string>
+    <string name="label_deadline">Deadline: </string>
+    <string name="label_status">Current status: </string>
+    <string name="status_completed">Completed</string>
+    <string name="status_waiting">Waiting</string>
+    <string name="status_uncompleted">Uncompleted</string>
+    <string name="status_ofd">Out of date</string>
+    <string name="alert_no_task">No task was found.</string>
+
+    <!--Task detail-->
+    <string name="frg_tkd_title">Task detail</string>
+    <string name="tkd_content">Content: </string>
+    <string name="tkd_list_staff">Staff assigned: </string>
+    <string name="tkd_bt_back">Back</string>
+    <string name="tkd_bt_complete">Complete</string>
+    <string name="tkd_comment">Comment: </string>
+    <string name="tkd_alert_completed">Task is completed, can not update uncomplete or complete again</string>
+    <string name="tkd_alert_uncompleted">Task is uncompleted, can not update complete or uncomplete again</string>
+    <string name="alert_update_task_ok">Update task successfully</string>
+    <string name="alert_update_task_failed">Update task failed, please try again</string>
+
+    <!--Create Task-->
+    <string name="frg_crt_title">Create task</string>
+    <string name="label_task_content">Type Task content</string>
+    <string name="label_task_deadline">Select deadline: </string>
+    <string name="alert_crt_finish_ok">Create task successfully</string>
+    <string name="alert_crt_finish_failed">Create task failed, please try again</string>
+    <string name="alert_crt_fill_content">Please type content</string>
+    <string name="alert_crt_fill_deadline">Please select deadline</string>
+    <string name="alert_crt_fill_staff">Please select staff</string>
+
+    <!--Call-->
+    <string name="alert_call_title_back">Are you sure to cancel calling?</string>
+
+    <!--Frg_Setting-->
+    <string name="frg_seting_title">Setting</string>
+
+    <!--Frg_Note-->
+    <string name="frg_note_title">Note of group: </string>
+    <string name="hint_note_type">Type Note</string>
+    <string name="alert_no_note">No Note was found.</string>
+    <string name="alert_note_not_permisson">You do not have permisson for this action</string>
+    <string name="alert_delete_confirm">Are you sure want to delete?</string>
+    <string name="inform_deletenote_success">Delete successfully</string>
+    <string name="inform_add_success">Add successfully</string>
+
+    <!--Frg_NoteEdit-->
+    <string name="frg_nedt_title">Note Edit</string>
+    <string name="frg_nedt_content">Content</string>
+    <string name="bt_nedt_save">Save</string>
+    <string name="bt_nedt_back">Back</string>
+    <string name="alert_fill_content">You need type content</string>
+    <string name="alert_update_ok">Update successfully</string>
+    <string name="alert_update_failed">Update failed, please try again</string>
+
+    <!--Frg_Status-->
+    <string name="frg_timeline_title">Timeline</string>
+    <string name="hint_status_type">Type something...</string>
+    <string name="alert_no_status">No Status was found.</string>
+    <string name="frg_status_bt_comment">Comment</string>
+
+    <!--Frg_StatusEdit-->
+    <string name="frg_sedt_title">Status Edit</string>
+
+    <!--Frg_Comment-->
+    <string name="frg_comment_title">Comment</string>
+    <string name="hint_comment_type">Type Comment</string>
+    <string name="alert_no_comment">No Comment.</string>
+    <string name="bt_see_more">See more</string>
+    <string name="frg_comment_intro">Comment for this status</string>
+
+    <!--Frg_Comment Edit-->
+    <string name="frg_cedt_title">Comment Edit</string>
+
+    <!--Frg_Wholike-->
+    <string name="frg_wholike_title">Who Like?</string>
+    <string name="wholike_label">People who like this status</string>
+    <string name="alert_no_like">No people like this status</string>
+</resources>

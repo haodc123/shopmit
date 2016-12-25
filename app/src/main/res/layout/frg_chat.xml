@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:background="@color/blue_global"
+        android:weightSum="10">
+        <Button
+            android:id="@+id/bt_c_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/ic_arrow_left_w"/>
+        <TextView
+            android:id="@+id/tv_c_name"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white_global"
+            android:text=""/>
+        <Button
+            android:id="@+id/bt_c_menu"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/ic_arrow_down_w"/>
+    </LinearLayout>-->
+
+    <!-- Search bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:weightSum="10" >
+        <EditText
+            android:id="@+id/edt_c_search"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="42dp"
+            android:singleLine="true"
+            android:hint="@string/search_message"
+            android:textColorHint="@color/gray_global" />
+        <Button
+            android:id="@+id/bt_c_search"
+            android:layout_width="39dp"
+            android:layout_height="35dp"
+            android:textColor="@color/white_global"
+            android:background="@drawable/ic_search2" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/global_transparent"
+        android:scrollbars="vertical"
+        android:transcriptMode="alwaysScroll"
+        android:stackFromBottom="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="50dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:background="@drawable/border_top"
+            android:weightSum="10" >
+            <EditText
+                android:id="@+id/edt_c_mess"
+                android:layout_width="0dp"
+                android:layout_weight="10"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:hint="@string/hint_message"
+                android:textColorHint="@color/gray_global"
+                android:background="@color/white_global"
+                android:textColor="@color/dark_global"/>
+            <Button
+                android:id="@+id/bt_c_send"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/blue_global"
+                android:textColor="@color/white_global"
+                android:text="@string/bt_send"/>
+        </LinearLayout>
+</RelativeLayout>

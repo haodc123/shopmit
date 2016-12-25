@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:paddingTop="5dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+ 
+    <FrameLayout 
+        android:id="@+id/row_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true" >
+        <ImageView
+            android:id="@+id/row_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left" />
+	    <TextView
+	        android:id="@+id/row_tv"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:textIsSelectable="true"
+	        android:layout_gravity="bottom"
+	        android:background="@drawable/bg_bubble_gray"
+	        android:autoLink="web"
+	        android:textSize="@dimen/text_global_normal" />
+	    
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/row_message"
+        android:layout_marginBottom="2dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="3dp" >
+        <TextView
+            android:id="@+id/row_sender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_global_tiny" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="4dp"
+            android:layout_marginLeft="4dp"
+            android:background="@color/gray_global" />
+        <TextView
+            android:id="@+id/row_timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_global_tiny" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="40dp" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_status_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:textColor="@color/dark_global"
+                android:textSize="@dimen/text_global_normal"/>
+
+            <TextView
+                android:id="@+id/tv_comment_intro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="@string/frg_comment_intro"
+                android:textColor="@color/gray_global"
+                android:textSize="@dimen/text_global_small" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/gray_global" />
+
+            <TextView
+                android:id="@+id/tv_row_alert_comment"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/alert_no_comment"
+                android:layout_gravity="center"
+                android:gravity="center" />
+            <!-- List comment -->
+            <com.example.shopmeet.view.MyExpandableListView
+                android:id="@+id/lv_comment_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:divider="@null"
+                android:layout_marginTop="10dp"
+                android:transcriptMode="alwaysScroll"
+                android:stackFromBottom="false">
+            </com.example.shopmeet.view.MyExpandableListView>
+            <TextView
+                android:id="@+id/tv_comment_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="@string/bt_see_more"
+                android:textColor="@color/blue_global"
+                android:textSize="@dimen/text_global_small" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@drawable/border_top"
+        android:weightSum="10" >
+        <EditText
+            android:id="@+id/edt_comment_type"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:hint="@string/hint_comment_type"
+            android:textColorHint="@color/gray_global"
+            android:background="@color/white_global"
+            android:textColor="@color/dark_global"/>
+        <Button
+            android:id="@+id/bt_comment_save"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ic_send" />
+    </LinearLayout>
+</RelativeLayout>

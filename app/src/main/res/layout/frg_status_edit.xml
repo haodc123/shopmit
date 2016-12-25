@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_global" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="45dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/row_sedt_created"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/gray_global"
+                android:textSize="@dimen/text_global_small"/>
+
+            <!--Content-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/frg_nedt_content"
+                android:layout_gravity="left" />
+            <EditText
+                android:id="@+id/edt_sedt_content"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:padding="4dp"
+                android:gravity="top|left"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:textSize="@dimen/text_global_normal"
+                android:textColor="@color/dark_global"
+                android:background="@drawable/edt_bg_schema_blue" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/bt_sedt_back"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:text="@string/bt_nedt_back"
+            android:layout_marginRight="10dp"
+            android:textSize="@dimen/text_global_small"
+            android:background="@color/gray_deep_global"
+            android:textColor="@color/white_global" />
+        <Button
+            android:id="@+id/bt_sedt_save"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:text="@string/bt_nedt_save"
+            android:textSize="@dimen/text_global_small"
+            android:background="@color/blue_global"
+            android:textColor="@color/white_global" />
+    </LinearLayout>
+</RelativeLayout>

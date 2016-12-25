@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_icon_tab"
+    android:layout_width="match_parent"
+    android:layout_height="42dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:background="@color/blue_global"
+    android:weightSum="5" >
+
+    <LinearLayout
+        android:id="@+id/ll_tab_per"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="6dp"
+        android:gravity="center_horizontal"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/img_tab_per"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_personal" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_tab_mess"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="3dp"
+        android:gravity="center_horizontal"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/img_tab_mess"
+            android:layout_width="34dp"
+            android:layout_height="34dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_tab_timeline"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="6dp"
+        android:gravity="center_horizontal"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/img_tab_timeline"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_timeline" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_tab_task"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="6dp"
+        android:gravity="center_horizontal"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/img_tab_task"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_task" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_tab_menu2"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/img_tab_menu2"
+            android:layout_width="20dp"
+            android:layout_height="8dp"
+            android:src="@drawable/ic_menu2" />
+    </LinearLayout>
+
+</LinearLayout>

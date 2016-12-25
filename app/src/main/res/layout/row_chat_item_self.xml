@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="right"
+    android:orientation="horizontal"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:paddingBottom="5dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp" >
+ 
+    <FrameLayout 
+        android:id="@+id/row_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true" >
+        <ImageView
+            android:id="@+id/row_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right" />
+	    <TextView
+	        android:id="@+id/row_tv"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="10dp"
+	        android:layout_gravity="right|bottom"
+	        android:textIsSelectable="true"
+	        android:background="@drawable/bg_bubble_blue"
+	        android:textColor="@color/white_global"
+	        android:autoLink="web"
+	        android:textSize="@dimen/text_global_normal" />
+	    
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/row_timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/row_message"
+        android:layout_below="@id/row_message"
+        android:layout_marginBottom="2dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="3dp"
+        android:textSize="@dimen/text_global_tiny" />
+ 
+</RelativeLayout>

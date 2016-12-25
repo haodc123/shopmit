@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_global" >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:orientation="vertical" >
+
+
+            <!-- Today title -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:weightSum="10" >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="9"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_today"
+                    android:textColor="@color/gray_global"
+                    android:textSize="@dimen/text_global_small" />
+
+            </LinearLayout>
+
+            <!-- List Group mess -->
+            <!--<com.example.shopmeet.view.MyExpandableListView
+                android:id="@+id/lv_mess_list_group"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:layout_marginTop="15dp"
+                android:transcriptMode="alwaysScroll"
+                android:stackFromBottom="false">
+            </com.example.shopmeet.view.MyExpandableListView>-->
+            <TextView
+                android:id="@+id/tv_messtd_alert"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/nomess_today"
+                android:layout_gravity="center"
+                android:gravity="center" />
+            <com.example.shopmeet.view.MyExpandableListView
+                android:id="@+id/lv_mess_list_today"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:layout_marginTop="15dp"
+                android:transcriptMode="alwaysScroll"
+                android:stackFromBottom="false">
+            </com.example.shopmeet.view.MyExpandableListView>
+
+            <!-- Line -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/gray_global" />
+
+            <!-- Members mess title -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:weightSum="10" >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="9"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_pass"
+                    android:textColor="@color/gray_global"
+                    android:textSize="@dimen/text_global_small" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_messp_alert"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/nomess_pass"
+                android:layout_gravity="center"
+                android:gravity="center" />
+            <!-- List Members mess -->
+            <com.example.shopmeet.view.MyExpandableListView
+                android:id="@+id/lv_mess_list_pass"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:layout_marginTop="15dp"
+                android:transcriptMode="alwaysScroll"
+                android:stackFromBottom="false">
+            </com.example.shopmeet.view.MyExpandableListView>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

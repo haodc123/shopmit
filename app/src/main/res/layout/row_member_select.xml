@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp"
+    android:orientation="horizontal" >
+
+    <CheckBox
+        android:id="@+id/row_cb"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="10dp" />
+
+    <com.example.shopmeet.shapeimageview.CircularImageView
+        android:id="@+id/row_img"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/no_avatar"
+        app:siBorderWidth="1dp"
+        app:siBorderColor="@color/white_global"
+        app:siBorderAlpha="0.5"
+        android:alpha="1" />
+    <!-- <ImageView
+        android:id="@+id/row_img"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp" /> -->
+    
+    <TextView 
+        android:id="@+id/row_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:singleLine="true"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/dark_global" />
+</LinearLayout>

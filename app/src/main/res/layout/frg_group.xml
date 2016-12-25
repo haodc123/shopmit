@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_global" >
+
+    <!-- Search bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:weightSum="10" >
+        <EditText
+            android:id="@+id/edt_per_search"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="42dp"
+            android:singleLine="true"
+            android:hint="@string/hint_search"
+            android:textColorHint="@color/gray_global"/>
+        <Button
+            android:id="@+id/bt_per_search"
+            android:layout_width="39dp"
+            android:layout_height="35dp"
+            android:textColor="@color/white_global"
+            android:background="@drawable/ic_search2"/>
+    </LinearLayout>
+
+<ScrollView 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dp" >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_group_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_margin="10dp"
+        android:textColor="@color/dark_global"
+        android:textSize="@dimen/text_global_small" />
+
+    <!-- Line -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/gray_global" />
+
+    <!-- Group title -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="9"
+            android:layout_height="wrap_content"
+            android:text="@string/title_other_members"
+            android:textColor="@color/gray_global"
+            android:textSize="@dimen/text_global_small" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:layout_height="wrap_content" >
+            <ImageView
+                android:id="@+id/img_group_do"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/ic_do_group" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_group_alert"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/alert_no_othermember"
+        android:layout_gravity="center"
+        android:gravity="center" />
+    <!-- List Members -->
+    <com.example.shopmeet.view.MyExpandableListView
+        android:id="@+id/lv_group_list_members"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:layout_marginTop="15dp"
+        android:transcriptMode="alwaysScroll"
+        android:stackFromBottom="false">
+    </com.example.shopmeet.view.MyExpandableListView>
+    <!--<android.support.v7.widget.RecyclerView
+        android:id="@+id/lv_group_list_members"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:layout_marginTop="15dp"
+        android:transcriptMode="alwaysScroll"
+        android:stackFromBottom="false" />-->
+
+</LinearLayout>
+</ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="15dp"
+        android:gravity="right"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/bt_group_add"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_add_circle" />
+    </LinearLayout>
+</RelativeLayout>

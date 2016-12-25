@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_global">#4183d7</color>
+    <color name="white_global">#fff</color>
+    <color name="gray_deep_global">#666</color>
+    <color name="gray_global">#aaa</color>
+    <color name="gray_bright_global">#dadada</color>
+    <color name="dark_global">#222</color>
+    <color name="green_global">#00dd00</color>
+
+    <color name="global_transparent">#00000000</color>
+
+</resources>

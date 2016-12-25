@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_global" >
+
+<ScrollView 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp" >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="9"
+            android:layout_height="wrap_content"
+            android:text="@string/wholike_label"
+            android:textColor="@color/gray_global"
+            android:textSize="@dimen/text_global_small" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_wh_alert"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/alert_no_like"
+        android:layout_gravity="center"
+        android:gravity="center" />
+    <!-- List Members -->
+    <com.example.shopmeet.view.MyExpandableListView
+        android:id="@+id/lv_wh_list_members"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:layout_marginTop="15dp"
+        android:transcriptMode="alwaysScroll"
+        android:stackFromBottom="false">
+    </com.example.shopmeet.view.MyExpandableListView>
+    <!--<android.support.v7.widget.RecyclerView
+        android:id="@+id/lv_group_list_members"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:layout_marginTop="15dp"
+        android:transcriptMode="alwaysScroll"
+        android:stackFromBottom="false" />-->
+
+</LinearLayout>
+</ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_global" >
+
+<ScrollView 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="45dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/row_tkd_created"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/gray_global"
+            android:textSize="@dimen/text_global_small"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="@string/tkd_content"
+            android:textColor="@color/dark_global"
+            android:textSize="@dimen/text_global_small"/>
+        <TextView
+            android:id="@+id/row_tkd_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/dark_global"
+            android:textSize="@dimen/text_global_normal"/>
+        <!--Require person-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="@string/label_created_by"
+                android:textColor="@color/gray_global"
+                android:textSize="@dimen/text_global_normal"/>
+            <TextView
+                android:id="@+id/row_tkd_require_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_global"
+                android:textSize="@dimen/text_global_normal"/>
+        </LinearLayout>
+        <!--Deadline-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="@string/label_deadline"
+                android:textColor="@color/gray_deep_global"
+                android:textSize="@dimen/text_global_normal"/>
+            <TextView
+                android:id="@+id/row_tkd_deadline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_deep_global"
+                android:textSize="@dimen/text_global_normal"/>
+        </LinearLayout>
+        <!--Status-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="@string/label_status"
+                android:textColor="@color/gray_deep_global"
+                android:textSize="@dimen/text_global_normal"/>
+            <TextView
+                android:id="@+id/row_tkd_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_deep_global"
+                android:textSize="@dimen/text_global_normal"/>
+        </LinearLayout>
+
+        <!--Staff-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="left"
+            android:text="@string/tkd_list_staff"
+            android:textColor="@color/dark_global" />
+        <!-- Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/gray_global" />
+        <TextView
+            android:id="@+id/tv_tkd_alert"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/alert_no_member"
+            android:layout_gravity="center"
+            android:gravity="center" />
+        <!-- List Members -->
+        <com.example.shopmeet.view.MyExpandableListView
+            android:id="@+id/lv_tkd_list_members"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:layout_marginTop="15dp"
+            android:transcriptMode="alwaysScroll"
+            android:stackFromBottom="false">
+        </com.example.shopmeet.view.MyExpandableListView>
+
+        <!--Comment-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/tkd_comment"
+            android:layout_gravity="left" />
+        <EditText
+            android:id="@+id/edt_tkd_comment"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:padding="4dp"
+            android:gravity="top|left"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:textSize="@dimen/text_global_normal"
+            android:textColor="@color/dark_global"
+            android:background="@drawable/edt_bg_schema_blue" />
+    </LinearLayout>
+</ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/bt_tkd_cancel"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:text="@string/tkd_bt_back"
+            android:layout_marginRight="10dp"
+            android:textSize="@dimen/text_global_small"
+            android:background="@color/gray_deep_global"
+            android:textColor="@color/white_global" />
+        <Button
+            android:id="@+id/bt_tkd_complete"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:text="@string/tkd_bt_complete"
+            android:textSize="@dimen/text_global_small"
+            android:background="@color/blue_global"
+            android:textColor="@color/white_global" />
+    </LinearLayout>
+</RelativeLayout>

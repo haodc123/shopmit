@@ -1,0 +1,35 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+    
+    <!--<item
+        android:id="@+id/action_logout"
+        android:title="@string/action_logout"
+        android:orderInCategory="100"  />-->
+        
+    <!--&lt;!&ndash; Add &ndash;&gt;
+    <item android:id="@+id/action_add"
+          android:icon="@drawable/ic_plus"
+          android:title=""
+          android:showAsAction="always" />
+    
+    &lt;!&ndash; Search Widget &ndash;&gt;
+    <item android:id="@+id/action_search"
+          android:icon="@drawable/ic_search"
+          android:showAsAction="always"
+          android:title=""
+          android:actionViewClass="android.widget.SearchView"/>
+    
+    &lt;!&ndash; Help &ndash;&gt;
+    <item android:id="@+id/action_help"
+          android:icon="@drawable/ic_launcher"
+          android:title="@string/action_help" 
+          android:showAsAction="never"/>
+    
+    &lt;!&ndash; Check updates &ndash;&gt;
+    <item android:id="@+id/action_check_updates"
+          android:icon="@drawable/ic_launcher"
+          android:title="@string/action_check_updates"
+          android:showAsAction="never" />-->
+    
+</menu>

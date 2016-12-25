@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_global" >
+
+<ScrollView 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="48dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/label_group_name"
+            android:layout_gravity="left" />
+        <EditText
+            android:id="@+id/edt_crg_name"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:padding="4dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/edt_bg_schema_blue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="left"
+            android:text="@string/label_select_store"
+            android:textColor="@color/dark_global" />
+        <Spinner
+            android:id="@+id/sp_crg_store"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:visibility="gone"
+            android:padding="4dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/edt_bg_schema_blue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="left"
+            android:text="@string/label_select_staff"
+            android:textColor="@color/dark_global" />
+
+        <ImageView
+            android:id="@+id/img_crg_select"
+            android:visibility="gone"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/ic_plus" />
+
+        <!-- Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/gray_global" />
+
+        <!-- Search bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:weightSum="10" >
+            <EditText
+                android:id="@+id/edt_per_search"
+                android:layout_width="0dp"
+                android:layout_weight="10"
+                android:layout_height="42dp"
+                android:singleLine="true"
+                android:hint="@string/hint_search"
+                android:textColorHint="@color/gray_global"/>
+            <Button
+                android:id="@+id/bt_per_search"
+                android:layout_width="39dp"
+                android:layout_height="35dp"
+                android:textColor="@color/white_global"
+                android:background="@drawable/ic_search2"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_crg_alert"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/alert_no_othermember"
+            android:layout_gravity="center"
+            android:gravity="center" />
+        <!-- List Members -->
+        <com.example.shopmeet.view.MyExpandableListView
+            android:id="@+id/lv_crg_list_members"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:layout_marginTop="15dp"
+            android:transcriptMode="alwaysScroll"
+            android:stackFromBottom="false">
+        </com.example.shopmeet.view.MyExpandableListView>
+        <!--<android.support.v7.widget.RecyclerView
+            android:id="@+id/lv_crg_list_members"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:layout_marginTop="15dp"
+            android:transcriptMode="alwaysScroll"
+            android:stackFromBottom="false" />-->
+    </LinearLayout>
+</ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/bt_crg_cancel"
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:text="@string/bt_cancel"
+            android:layout_marginRight="10dp"
+            android:textSize="@dimen/text_global_small"
+            android:background="@color/gray_deep_global"
+            android:textColor="@color/white_global" />
+        <Button
+            android:id="@+id/bt_crg_create"
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:text="@string/bt_create"
+            android:textSize="@dimen/text_global_small"
+            android:background="@color/blue_global"
+            android:textColor="@color/white_global" />
+    </LinearLayout>
+</RelativeLayout>

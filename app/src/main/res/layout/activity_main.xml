@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_global"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true" >
+
+    <RelativeLayout
+        android:id="@+id/video"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.opengl.GLSurfaceView
+            android:id="@+id/glview_call"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <View
+            android:id="@+id/view_bg"
+            android:visibility="gone"
+            android:background="@color/white_global"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tv_rtc_name"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/dark_global"
+            android:textSize="@dimen/text_global_big"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_rtc_status"
+            android:gravity="center"
+            android:layout_below="@id/tv_rtc_name"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="65dp"
+            android:textColor="@color/dark_global"
+            android:textSize="@dimen/text_global_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--Button line 1-->
+        <LinearLayout
+            android:id="@+id/ll_rtc_button_l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="80dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <Button
+                android:id="@+id/btn_rtc_decline"
+                android:visibility="invisible"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/ic_decline"/>
+            <Button
+                android:id="@+id/btn_rtc_endcall"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/ic_endcall"/>
+            <Button
+                android:id="@+id/btn_rtc_answer"
+                android:visibility="invisible"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/ic_answer"/>
+        </LinearLayout>
+        <!--Button line 2-->
+        <LinearLayout
+            android:id="@+id/ll_rtc_button_l2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <Button
+                android:id="@+id/btn_rtc_sound"
+                android:visibility="gone"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/ic_sound"/>
+            <Button
+                android:id="@+id/btn_rtc_video"
+                android:visibility="gone"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/ic_video"/>
+            <Button
+                android:id="@+id/btn_rtc_camera"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/ic_camera"/>
+        </LinearLayout>
+
+        <!--<Button
+            android:id="@+id/btnStop"
+            android:layout_marginBottom="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="STOP (CALLER)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btnStop2"
+            android:layout_marginBottom="200dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="STOP (FRIEND)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />-->
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

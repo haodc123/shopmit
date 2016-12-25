@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_global" >
+
+<ScrollView 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="2dp" >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:orientation="vertical" >
+	    
+    <!-- Profile title -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="wrap_content"
+            android:text="@string/title_profile"
+            android:textColor="@color/gray_global"
+            android:textSize="@dimen/text_global_small" />
+
+    </LinearLayout>
+
+    <!-- Profile content -->
+    <LinearLayout
+            android:id="@+id/ll_personal_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:weightSum="10" >
+            <!-- <ImageView
+                android:id="@+id/img_personal_avatar"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:src="@drawable/no_avatar"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="bottom" /> -->
+        <com.example.shopmeet.shapeimageview.CircularImageView
+            android:id="@+id/img_personal_avatar"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@drawable/no_avatar"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="bottom"
+            app:siBorderWidth="1dp"
+            app:siBorderColor="@color/white_global"
+            app:siBorderAlpha="0.5"
+            android:alpha="1"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="10"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+                <TextView
+                    android:id="@+id/tv_personal_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jenny"
+                    android:textSize="@dimen/text_global_normal"
+                    android:textColor="@color/dark_global"
+                    android:layout_marginTop="0dp" />
+                <TextView
+                    android:id="@+id/tv_personal_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="jenny@gmail.com"
+                    android:textColor="@color/gray_global"
+                    android:textSize="@dimen/text_global_small"
+                    android:layout_marginTop="0dp" />
+            </LinearLayout>
+    </LinearLayout>
+
+    <!-- Line -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/gray_global" />
+
+
+    <TextView 
+        android:id="@+id/tv_setting_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/action_logout"
+        android:textColor="@color/dark_global"
+        android:textSize="@dimen/text_global_normal" />
+    <TextView
+        android:id="@+id/tv_setting_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/action_exit"
+        android:textColor="@color/dark_global"
+        android:textSize="@dimen/text_global_normal" />
+
+
+</LinearLayout>
+</ScrollView>
+
+</RelativeLayout>

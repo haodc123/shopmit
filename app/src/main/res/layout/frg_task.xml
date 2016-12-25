@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_global" >
+
+    <!-- Time bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:textSize="@dimen/text_global_normal"
+        android:weightSum="10" >
+        <TextView
+            android:id="@+id/tv_task_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="@string/task_time_all"
+            android:textColor="@color/dark_global" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray_global" />
+        <TextView
+            android:id="@+id/tv_task_today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="@string/task_time_today"
+            android:textColor="@color/gray_bright_global" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray_global" />
+        <TextView
+            android:id="@+id/tv_task_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="@string/task_time_week"
+            android:textColor="@color/gray_bright_global" />
+    </LinearLayout>
+
+<ScrollView 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="30dp" >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_row_alert_task"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/alert_no_task"
+                    android:layout_gravity="center"
+                    android:gravity="center" />
+                <!-- List Group -->
+                <com.example.shopmeet.view.MyExpandableListView
+                    android:id="@+id/lv_task_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    android:layout_marginTop="15dp"
+                    android:transcriptMode="alwaysScroll"
+                    android:stackFromBottom="false">
+                </com.example.shopmeet.view.MyExpandableListView>
+
+
+</LinearLayout>
+</ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="15dp"
+        android:gravity="right"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/bt_task_add"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_add_circle" />
+    </LinearLayout>
+</RelativeLayout>
